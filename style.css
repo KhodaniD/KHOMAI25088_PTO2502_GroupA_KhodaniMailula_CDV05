@@ -1,0 +1,19 @@
+/* ------------------------------------------- */
+/* 1. Global Setup and Variables (Professional Purple Palette) */
+/* ------------------------------------------- */
+
+:root {
+    /* --- Colour Palette (Grey Friends Theme) --- */
+    --color-primary-accent: #845EC2; /* Muted Purple - Main interactive/highlight colour */
+    --color-secondary-accent: #B0A8B9; /* Pale Lavender/Grey - Subtle borders/secondary background */
+    --color-text-main: #4B4453; /* Deep Charcoal/Slate - Primary body text */
+    --color-background: #F8F7F9; /* Off-White/Very Light Grey - Main page background */
+    --color-card-bg: #FFFFFF; /* White - Default background for card/navbar elements */
+    --color-shadow: rgba(75, 68, 83, 0.1); /* Subtle shadow using text colour opacity */
+    --color-white: #ffffff;
+
+    /* --- Typography --- */
+    --font-heading: 'Lato', sans-serif;
+    --font-body: 'Source Sans Pro', sans-serif;
+    --transition-speed: 0.3s; /* Global transition for smooth state changes */
+}
