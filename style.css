@@ -17,3 +17,86 @@
     --font-body: 'Source Sans Pro', sans-serif;
     --transition-speed: 0.3s; /* Global transition for smooth state changes */
 }
+
+/* =========================================== */
+/* 2. Dark Mode Overrides (body.dark-mode)     */
+/* HIGHEST CONTRAST BUTTON STRATEGY APPLIED */
+/* =========================================== */
+body.dark-mode {
+    /* Color shifts */
+    --color-primary-accent: #E5C2FF; /* BRIGHTER Lavender for high-contrast glow (Outline Button Text/Border) */
+    --color-secondary-accent: #6C5B7B; /* Dark Plum - Used for borders and skills/secondary elements */
+    --color-text-main: #EFEFEF; /* Light text for readability */
+    --color-background: #1E192B; /* Deep Purple-Black for MAXIMUM contrast */
+    --color-card-bg: #3A3247; /* Mid-Dark Purple-Gray for distinct card background */
+    --color-shadow: rgba(0, 0, 0, 0.5); /* Stronger shadow in dark environment */
+}
+
+/* Specific component adjustments for dark mode contrast */
+body.dark-mode h2::after {
+    /* Ensure section line remains visible with new accent color */
+    background: var(--color-primary-accent);
+}
+
+body.dark-mode .project-card, 
+body.dark-mode .skills-list li, 
+body.dark-mode .education-item {
+    /* Adjust borders and box shadow for better dark mode layering */
+    border-color: var(--color-secondary-accent);
+    box-shadow: 0 4px 10px var(--color-shadow);
+}
+
+body.dark-mode .skills-list li {
+    /* Use darker accent background for skills chips */
+    background-color: #4A3C6E; /* Deep purple chip color */
+    color: var(--color-white);
+}
+
+body.dark-mode .site-header {
+    background-color: var(--color-background); /* Matches the main dark background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .toggle-switch,
+body.dark-mode .logo {
+    /* Ensure icon/logo contrast is maintained */
+    color: var(--color-primary-accent);
+}
+
+/* === DARK MODE BUTTON OVERRIDES (High Contrast) === */
+
+/* Primary Button (View My Work) - Now solid white with dark text for max contrast */
+body.dark-mode .primary-btn {
+    background-color: var(--color-white); 
+    color: #1E192B; /* Deep background color for text, ensuring visibility */
+    border-color: var(--color-white);
+    box-shadow: 0 4px 10px rgba(229, 194, 255, 0.4); 
+}
+
+/* Primary Button Hover */
+body.dark-mode .primary-btn:hover {
+    background-color: transparent;
+    border-color: var(--color-primary-accent);
+    color: var(--color-primary-accent);
+}
+
+/* Secondary Button (Email Khodani) - Bright Outline */
+body.dark-mode .secondary-btn {
+    background-color: transparent;
+    border-color: var(--color-primary-accent); /* Bright border */
+    color: var(--color-primary-accent); /* Bright text */
+}
+
+/* Adjusting project card title box colors for dark mode contrast */
+body.dark-mode .podcast-bg {
+    background-color: #D8BFD8; /* Use light accent */
+}
+body.dark-mode .podcast-bg h3 {
+    color: #4B4453; /* Dark text for light background */
+}
+body.dark-mode .kanban-bg {
+    background-color: #6C5B7B; 
+}
+body.dark-mode .bookconnect-bg {
+    background-color: #2C3E50;
+}
