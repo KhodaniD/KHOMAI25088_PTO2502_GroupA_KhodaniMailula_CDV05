@@ -215,3 +215,48 @@ h2::after {
 .toggle-switch:hover {
     color: var(--color-primary-accent);
 }
+
+/* =========================================== */
+/* 5. Buttons (Consistent Interaction)         */
+/* =========================================== */
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 15px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+}
+
+.primary-btn {
+    background-color: var(--color-primary-accent);
+    color: var(--color-white);
+    box-shadow: 0 4px 10px rgba(132, 94, 194, 0.4);
+}
+
+.primary-btn:hover {
+    background-color: transparent;
+    border-color: var(--color-primary-accent);
+    color: var(--color-primary-accent);
+    box-shadow: none;
+}
+
+.secondary-btn {
+    background-color: var(--color-secondary-accent);
+    color: var(--color-text-main);
+    margin-right: 15px;
+    border: 2px solid var(--color-secondary-accent);
+}
+
+.secondary-btn:hover {
+    background-color: transparent;
+    border-color: var(--color-primary-accent);
+    color: var(--color-primary-accent);
+}
