@@ -528,3 +528,93 @@ section {
     color: var(--color-primary-accent);
 }
 
+/* =========================================== */
+/* 11. Media Queries (Responsive Adjustments)  */
+/* =========================================== */
+
+/* Tablet and Desktop Layouts (768px and up) */
+@media (min-width: 768px) {
+    /* Project Grid: 3 columns for wider screens */
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Hero: Horizontal layout for larger screens */
+    .hero .container {
+        flex-direction: row;
+        text-align: left;
+    }
+    
+    .hero-content {
+        max-width: 60%;
+        text-align: left;
+    }
+
+    .hero-image {
+        max-width: 40%;
+    }
+}
+
+/* Mobile Layout Adjustments (Up to 768px) */
+@media (max-width: 768px) {
+    /* Hero: Stack content vertically */
+    .hero .container {
+        flex-direction: column;
+    }
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+    }
+    .hero .tagline {
+        margin-bottom: 20px;
+    }
+    .hero-image {
+        margin-top: 30px;
+        order: -1; /* Move image above content on mobile for better flow */
+    }
+    .avatar-placeholder {
+        width: 200px;
+        height: 200px;
+    }
+    /* Button stacking */
+    .actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .actions .btn {
+        width: 80%;
+        margin-right: 0;
+    }
+}
+
+/* Small Mobile Adjustments (Up to 500px) */
+@media (max-width: 500px) {
+    /* Navigation: Stack logo and menu links */
+    .site-header .container {
+        flex-direction: column;
+    }
+    .site-header nav {
+        margin-top: 10px;
+        width: 100%;
+    }
+    .site-header ul {
+        justify-content: space-around;
+        width: 100%;
+        padding: 0;
+    }
+    .site-header ul li a {
+        margin: 0;
+    }
+    /* Keep the toggle button easily accessible */
+    .toggle-switch {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+    /* Footer: Stack content vertically */
+    .site-footer .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
