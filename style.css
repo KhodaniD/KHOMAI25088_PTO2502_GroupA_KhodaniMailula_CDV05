@@ -100,3 +100,59 @@ body.dark-mode .kanban-bg {
 body.dark-mode .bookconnect-bg {
     background-color: #2C3E50;
 }
+
+/* =========================================== */
+/* 3. Base Styles, Reset, and Typography       */
+/* =========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Smooth transition for dark mode on all elements */
+    transition: color var(--transition-speed), background-color var(--transition-speed), 
+                border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text-main);
+    background-color: var(--color-background);
+    line-height: 1.6;
+}
+
+/* Global Content Wrapper */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--color-text-main);
+    margin-bottom: 0.5em;
+}
+
+/* Section Heading Style */
+h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    text-align: center;
+    margin-bottom: 2em;
+    display: block;
+}
+
+/* Horizontal line under the H2 section title */
+h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--color-primary-accent);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
